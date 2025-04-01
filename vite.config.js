@@ -1,12 +1,11 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
-    // Specify your render.ts file as the entry point
     rollupOptions: {
       input: './src/render.ts',
+      external: ['fsevents'],
     },
-    // Output directory
     outDir: 'dist',
   },
-});
+})
